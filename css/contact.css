@@ -266,8 +266,9 @@ button {
   font-family: "Roboto" sans-serif;
   padding: 15px var(--px);
   line-height: 1.7;
-  position: relative;
-  bottom: 0%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .copyright a {
