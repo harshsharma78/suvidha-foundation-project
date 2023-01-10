@@ -1,0 +1,375 @@
+/* Google Fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,400;1,600&display=swap');
+
+
+:root {
+
+  /**
+     * colors 
+     */
+
+  --red-orange-color-wheel: #fd0800;
+  /* --red-orange-color-wheel: hsl(15, 100%, 55%); */
+  --ultramarine-blue: hsl(217, 100%, 50%);
+  --lavender-blue: hsl(229, 96%, 91%);
+  --oxford-blue: hsl(229, 84%, 12%);
+  --light-gray: hsl(0, 0%, 80%);
+  --sonic-silver: hsl(0, 0%, 47%);
+  --blue-crayola: hsl(216, 98%, 52%);
+  --cultured: hsl(228, 26%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  /**
+     * typography 
+     */
+
+  --fs-1: 38px;
+  --fs-2: 35px;
+  --fs-3: 30px;
+  --fs-4: 22px;
+  --fs-5: 20px;
+  --fs-6: 15px;
+
+  --fw-5: 500;
+  --fw-6: 600;
+  --fw-7: 700;
+  --fw-8: 800;
+  --fw-9: 900;
+
+  /**
+     * spacing 
+     */
+
+  --px: 15px;
+  --py: 80px;
+
+  /**
+     * others 
+     */
+
+  --default-transition: 0.25s ease;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+body {
+  scroll-behavior: smooth;
+  position: relative;
+  /* min-height: 100vh;
+  width: 100%;
+  overflow: hidden; */
+
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+}
+
+ion-icon {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--red-orange-color-wheel);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ultramarine-blue);
+}
+
+/*-----------------------------------*\
+  #COMPONENT
+\*-----------------------------------*/
+
+.btn {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-5);
+  border-radius: 8px;
+  color: var(--white);
+  padding: 20px 45px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.btn .btn-text {
+  position: relative;
+  z-index: 5;
+}
+
+.btn-primary,
+.btn-secondary .square {
+  background: var(--red-orange-color-wheel);
+}
+
+.btn .square {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: var(--default-transition);
+}
+
+.btn:hover .square {
+  right: -2px;
+  width: 102%;
+  height: 102%;
+}
+
+.btn-primary .square,
+.btn-secondary {
+  background: var(--oxford-blue);
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.section-subtitle {
+  color: var(--ultramarine-blue);
+  font-weight: var(--fw-7);
+  text-transform: uppercase;
+}
+
+.section-text {
+  color: var(--sonic-silver);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-8);
+  color: var(--oxford-blue);
+  line-height: 1.3;
+}
+
+
+/*-----------------------------------*\
+  #COURSE
+\*-----------------------------------*/
+
+.course {
+  padding: 2rem 2rem;
+  margin: .2rem;
+  background: linear-gradient(to right bottom, hsla(217, 100%, 50%, 0.3), hsla(15, 100%, 55%, 0.3));
+}
+
+.course .section-subtitle {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: 800;
+
+}
+
+.course .section-title {
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  font-weight: 1000;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 22rem 22rem 22rem;
+  gap: 50px;
+  /* height: 200rem; */
+  margin-bottom: 60px;
+}
+
+.course-card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 10px 50px hsla(0, 0%, 0%, 0.1);
+  overflow: hidden;
+}
+
+.course-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--default-transition);
+}
+
+.course-card:hover .course-banner img {
+  transform: scale(1.05);
+}
+
+.course-banner .course-tag-box {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.course-banner .badge-tag {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-6);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.course-banner .orange {
+  background: var(--red-orange-color-wheel);
+}
+
+.course-banner .blue {
+  background: var(--ultramarine-blue);
+}
+
+.course-card .course-content {
+  padding: 30px;
+  padding-bottom: 20px;
+}
+
+.course-card .card-title {
+  margin-bottom: 20px;
+}
+
+.course-card .card-title a {
+  color: var(--oxford-blue);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-6);
+  line-height: 1.3;
+  transition: var(--default-transition);
+}
+
+.course-card:hover .card-title a {
+  color: var(--red-orange-color-wheel);
+}
+
+.course-card .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-card .border-bottom {
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.course-card .author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-card .author-img {
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.2);
+}
+
+.course-card .author-name {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-6);
+  color: var(--sonic-silver);
+  transition: var(--default-transition);
+}
+
+.course-card .author-name:hover {
+  color: var(--oxford-blue);
+}
+
+.course-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-card .rating ion-icon {
+  font-size: 20px;
+  color: hsl(45, 100%, 51%);
+}
+
+.course-card .enrolled p,
+.course-card .rating p {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-6);
+  color: var(--sonic-silver);
+}
+
+.course-card .course-price {
+  color: var(--red-orange-color-wheel);
+  font-size: 20px;
+  font-weight: var(--fw-7);
+}
+
+.course-card .enrolled {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.course-card .icon-user {
+  background: hsl(138, 59%, 91%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.course-list {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.course-list-items {
+  list-style: disc;
+}
+
+.course .btn-primary {
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 2%;
+  right: 8%;
+}
