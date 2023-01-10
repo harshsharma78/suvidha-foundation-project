@@ -145,9 +145,9 @@ button {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 20rem 20rem 20rem;
-  gap: 35px;
-  padding: 25px 22px;
+  grid-template-columns: 23rem 23rem 23rem;
+  gap: 40px;
+  padding: 36px 25px;
 }
 
 .footer-logo {
